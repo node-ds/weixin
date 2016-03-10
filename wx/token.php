@@ -11,7 +11,7 @@ require_once "config.php";
  * @author widy
  *
  */
-class WxOpenid
+class WxToken
 {
 	/**
 	 * 
@@ -74,8 +74,7 @@ class WxOpenid
 		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST,FALSE);
 		curl_setopt($ch, CURLOPT_HEADER, FALSE);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-		if(WxConfig::CURL_PROXY_HOST != "0.0.0.0" 
-			&& WxConfig::CURL_PROXY_PORT != 0){
+		if(WxConfig::CURL_PROXY_HOST != "0.0.0.0" && WxConfig::CURL_PROXY_PORT != 0){
 			curl_setopt($ch,CURLOPT_PROXY, WxConfig::CURL_PROXY_HOST);
 			curl_setopt($ch,CURLOPT_PROXYPORT, WxConfig::CURL_PROXY_PORT);
 		}
