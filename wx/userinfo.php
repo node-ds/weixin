@@ -24,7 +24,7 @@ class WxUser
 	 */
 	 
 	public $openid=WxToken::GetOpenid();
-	$data=WxToken::data;
+	$data=WxToken::$data;
 	public $token=$data["access_token"];
 	
 	/**
